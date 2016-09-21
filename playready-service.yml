@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8000}
+
+# Defines the destination to which the input MessageChannel should be bound
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: security-system
+          group: security-systems
+          durableSubscription: true
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+    pause-endpoint:
+      enabled: true
+    resume-endpoint:
+      enabled: true
+  shutdown:
+    enabled: true

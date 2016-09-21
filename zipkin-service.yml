@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:9411}
+
+spring:
+  datasource:
+    initialize: false
+    sleuth:
+      enabled: false
+
+zipkin:
+  store:
+    type: mem
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+    pause-endpoint:
+      enabled: true
+    resume-endpoint:
+      enabled: true
+  shutdown:
+    enabled: true

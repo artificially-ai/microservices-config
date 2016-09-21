@@ -1,0 +1,14 @@
+server:
+  port: ${PORT:8810}
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+    pause-endpoint:
+      enabled: true
+    resume-endpoint:
+      enabled: true
+  shutdown:
+    enabled: true

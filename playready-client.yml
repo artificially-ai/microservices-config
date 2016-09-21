@@ -1,0 +1,31 @@
+server:
+  port: ${PORT:9999}
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: security-system
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+        strategy: SEMAPHORE
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+    pause-endpoint:
+      enabled: true
+    resume-endpoint:
+      enabled: true
+  shutdown:
+    enabled: true
+
+#spring.cloud.stream.bindings.output.durableSubscription=true
+#security.oauth2.resource.userInfoUri=http://localhost:9191/uaa/user

@@ -1,0 +1,26 @@
+server:
+  port: ${PORT:8989}
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+    pause-endpoint:
+      enabled: true
+    resume-endpoint:
+      enabled: true
+  shutdown:
+    enabled: true
+
+management:
+  port: 8990
+
+logging:
+  level:
+    root: INFO
+    com.netflix.discovery: 'OFF'
+
+turbine:
+  appConfig: playready-client,playready-service
+  clusterNameExpression: new String('default')

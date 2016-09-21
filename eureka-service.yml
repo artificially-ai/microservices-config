@@ -1,0 +1,19 @@
+server:
+  port: ${PORT:8761}
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+
+endpoints:
+  refresh:
+    enabled: true
+  restart:
+    enabled: true
+    pause-endpoint:
+      enabled: true
+    resume-endpoint:
+      enabled: true
+  shutdown:
+    enabled: true
