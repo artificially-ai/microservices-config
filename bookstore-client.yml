@@ -6,7 +6,7 @@ spring:
     stream:
       bindings:
         output:
-          destination: security-system
+          destination: bookstore
 
 hystrix:
   command:
@@ -26,6 +26,9 @@ endpoints:
       enabled: true
   shutdown:
     enabled: true
+
+application:
+  message: Hello, Wolder!
 
 #spring.cloud.stream.bindings.output.durableSubscription=true
 #security.oauth2.resource.userInfoUri=http://localhost:9191/uaa/user

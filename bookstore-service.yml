@@ -7,8 +7,8 @@ spring:
     stream:
       bindings:
         input:
-          destination: security-system
-          group: security-systems
+          destination: bookstore
+          group: bookstore-group
           durableSubscription: true
 
 endpoints:
