@@ -22,5 +22,5 @@ logging:
     com.netflix.discovery: 'OFF'
 
 turbine:
-  appConfig: playready-client,playready-service
+  appConfig: bookstore-client,bookstore-service
   clusterNameExpression: new String('default')
