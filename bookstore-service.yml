@@ -10,8 +10,15 @@ spring:
           destination: bookstore
           group: bookstore-group
           durableSubscription: true
-
-endpoints:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bookstore
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+points:
   refresh:
     enabled: true
   restart:
